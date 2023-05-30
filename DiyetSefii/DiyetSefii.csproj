@@ -126,6 +126,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Diyet.cs" />
+    <Compile Include="Models\YemekOzellikler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +171,7 @@
     <Content Include="templatemo_560_astro_motion\js\jquery-3.5.1.min.js" />
     <Content Include="templatemo_560_astro_motion\js\slick.js" />
     <Content Include="templatemo_560_astro_motion\js\templatemo-script.js" />
+    <Content Include="templatemo_560_astro_motion\img\logo.jpg" />
     <Content Include="templatemo_560_astro_motion\video\gfp-astro-timelapse.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -186,6 +188,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Form\Index.cshtml" />
     <Content Include="Views\Form\Result.cshtml" />
+    <Content Include="Views\Form\Form.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

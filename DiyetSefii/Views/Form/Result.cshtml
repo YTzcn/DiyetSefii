@@ -1,4 +1,4 @@
-﻿
+﻿@model List<DiyetSefii.Models.YemekOzellikler>
 @{
     Layout = null;
 }
@@ -30,7 +30,16 @@
                 border-top: 5px solid #000;
             }
     </style>
-
+    <style>
+        .custom-div {
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 50px auto;
+            width: 100%;
+            height: 60%;
+            padding: 20px;
+            margin-bottom: 50%;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,12 +55,45 @@
         <source src="~/templatemo_560_astro_motion/video/gfp-astro-timelapse.mp4" type="video/mp4">
     </video>
     <nav style="padding-left:10%" class="navbar navbar-expand-lg" id="tm-nav">
-        <a class="navbar-brand" href="#">Diyet Şefim</a>
+        <img src="~/templatemo_560_astro_motion/img/logo.jpg" width="5%" height="5%">
+        <a style="padding-left: 2%;" class="navbar-brand" href="#">Diyet Şefim</a>
     </nav>
     <div class="page-container">
         <h1 style="color:white">Diyet Testi Sonuçları</h1>
         <div style="padding-top:5%" class="container-fluid">
+            <div class="container">
+                <div class="custom-div">
+                    <h3>Bu bir örnektir</h3>
+                    <p>Bu bir div içinde yazı yazabileceğiniz bir alandır.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Yemek</th>
+                                <th>Protein</th>
+                                <th>Yağ</th>
+                                <th>Karbonhidrat</th>
+                                <th>Tuz</th>
+                                <th>Şeker</th>
+                                <th>Kalori</th>
+                            </tr>
+                        </thead>
 
+                        @foreach (var X in Model)
+                        {
+                            <tr>
+                                <td>@X.Yemekler</td>
+                                <td>@X.Protein</td>
+                                <td>@X.Yağ</td>
+                                <td>@X.Karbonhidrat</td>
+                                <td>@X.Tuz</td>
+                                <td>@X.Şeker</td>
+                                <td>@X.Kalori</td>
+                            </tr>
+
+                        }
+                    </table>
+                </div>
+            </div>
 
         </div>
         <div id="loader-wrapper">

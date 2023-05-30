@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +29,16 @@
                 border-top: 5px solid #000;
             }
     </style>
+    <style>
+        .custom-div {
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 50px auto;
+            width: 90%;
+            height: 30%;
+            padding: 20px;
+            margin-bottom: 20%;
+        }
+    </style>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,126 +54,19 @@
     <video autoplay muted loop id="bg-video">
         <source src="~/templatemo_560_astro_motion/video/gfp-astro-timelapse.mp4" type="video/mp4">
     </video>
-    <nav style="padding-left:10%" class="navbar navbar-expand-lg" id="tm-nav">
-        <a class="navbar-brand" href="#">Diyet Şefim</a>
+    <nav style="padding-left:5%;align-items: center;" class="navbar navbar-expand-lg" id="tm-nav">
+        <img src="~/templatemo_560_astro_motion/img/logo.jpg" width="5%" height="5%">
+        <a style="padding-left: 2%;" class="navbar-brand" href="#">Diyet Şefim</a>
     </nav>
-    <div class="page-container">
-        <h1 style="color:white">Diyet Testine Hoşgeldiniz</h1>
-        <div style="padding-top:5%" class="container-fluid">
-            @using (Html.BeginForm("Result", "Form", FormMethod.Post))
-            {
-                <form>
-                    <div class="form-group">
-                        <h4>Yaşınız nedir?</h4>
-                        <select class="custom-select" name="age">
-                            <option  value="A">A) 18-30</option>
-                            <option value="B">B) 31-45</option>
-                            <option value="C">C) 46 ve üzeri</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Kilonuz hangi aralıktadır?</h4>
-                        <select class="custom-select" name="weight">
-                            <option value="0">A) İdeal kiloda</option>
-                            <option value="1">B) Hafif kilolu</option>
-                            <option value="2">C) Kilolu</option>
-                            <option value="3">D) Obez</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Cinsiyetiniz nedir?</h4>
-                        <select class="custom-select" name="gender">
-                            <option value="0">A) Kadın</option>
-                            <option value="1">B) Erkek</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Aktivite düzeyiniz nasıl?</h4>
-                        <select class="custom-select" name="activity">
-                            <option value="0">A) Düşük (Oturma işi)</option>
-                            <option value="1">B) Orta (Hafif egzersiz)</option>
-                            <option value="2s">C) Yüksek (Spor)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Şeker hastalığınız var mı?</h4>
-                        <select class="custom-select" name="diabetes">
-                            <option value="0">A) Evet</option>
-                            <option value="1">B) Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Kalp hastalığınız var mı?</h4>
-                        <select class="custom-select" name="heartdisease">
-                            <option value="0">A) Evet</option>
-                            <option value="1">B) Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Tansiyon hastalığınız var mı?</h4>
-                        <select class="custom-select" name="hypertension">
-                            <option value="0">A) Evet</option>
-                            <option value="1">B) Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Günlük su tüketiminiz nasıl?</h4>
-                        <select class="custom-select" name="waterintake">
-                            <option value="0">A) Yeterli miktar</option>
-                            <option value="1">B) Az tüketiyorum</option>
-                            <option value="2">C) Çok az tüketiyorum</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Fast food tüketiminiz nasıl?</h4>
-                        <select class="custom-select" name="fastfoodintake">
-                            <option value="0">A) Hiç tüketmem</option>
-                            <option value="1">B) Arada sırada tüketirim</option>
-                            <option value="2">C) Sık sık tüketirim</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Spor yapma alışkanlığınız nedir?</h4>
-                        <select class="custom-select" name="exercisehabit">
-                            <option value="0">A) Her gün yaparım</option>
-                            <option value="1">B) Haftada birkaç kez yaparım</option>
-                            <option value="2">C) Hiç yapmam</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Farklı Kültürden Yemek Yemeği Seviyor Musunuz?</h4>
-                        <select class="custom-select" name="cuisinepreference">
-                            <option value="0">Evet</option>
-                            <option value="1">Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Kilo almak istiyor musun?</h4>
-                        <select class="custom-select" name="weightgain">
-                            <option value="0">Evet</option>
-                            <option value="1">Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Kilonu korumak mı istiyorsun?</h4>
-                        <select class="custom-select" name="weightmaintenance">
-                            <option value="0">Evet</option>
-                            <option value="1">Hayır</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <h4>Kilo vermek mi istiyorsun?</h4>
-                        <select class="custom-select" name="weightloss">
-                            <option value="0">Evet</option>
-                            <option value="1">Hayır</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Gönder</button>
-                </form>
-            }
-
-                </div style="padding-top:20%">
-            </div>
+    <div style="padding-top: 3%;align-items: center; " class="page-container">
+        <div class="custom-div">
+            <h1 style="color:white">Diyet Şefine Hoşgeldiniz</h1>
+            <h3 style="">Vereceğiniz Bilgiler Doğrultusunda Size En Doğru Ve Farklı Yemek Kültürlerine Bu Platformdan Ulaşabilrsiniz. Size En Uygun Menüyü Sunabilmemiz İçin Sizi Tanımak İsteriz</h3>
+            <a href="~/Form/Form" style="margin-bottom: 40%;" data-page-no="2" class="btn btn-primary tm-intro-btn tm-page-link">
+                Dilerseniz Başlayalım
+            </a>
+        </div>
+    </div>
     <div id="loader-wrapper">
         <div id="loader"></div>
         <div class="loader-section section-left"></div>
@@ -173,7 +77,7 @@
     <script src="~/templatemo_560_astro_motion/js/slick.js"></script>
     <script src="~/templatemo_560_astro_motion/js/templatemo-script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    @*<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>*@
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
