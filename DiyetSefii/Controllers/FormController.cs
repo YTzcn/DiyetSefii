@@ -1127,6 +1127,66 @@ namespace DiyetSefii.Controllers
 
 
                 Random random = new Random();
+                int satirIndex = random.Next(FKŞekerHastasıYemek.GetLength(0));
+                YemekOzellikler yemekOzellikler12 = new YemekOzellikler();
+                for (int i = 0; i < ŞekerHasatasıTürkYemek.GetLength(1); i++)
+                {
+
+                    yemekOzellikler12.Yemekler = FKŞekerHastasıYemek[satirIndex, 0];
+                    yemekOzellikler12.Protein = FKŞekerHastasıYemek[satirIndex, 1];
+                    yemekOzellikler12.Yağ = FKŞekerHastasıYemek[satirIndex, 2];
+                    yemekOzellikler12.Karbonhidrat = FKŞekerHastasıYemek[satirIndex, 3];
+                    yemekOzellikler12.Tuz = FKŞekerHastasıYemek[satirIndex, 4];
+                    yemekOzellikler12.Şeker = FKŞekerHastasıYemek[satirIndex, 5];
+                    yemekOzellikler12.Kalori = FKŞekerHastasıYemek[satirIndex, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler12);
+                Random random1 = new Random();
+                int satirIndex1 = random1.Next(FKŞekerHastasıÇorba.GetLength(0));
+                YemekOzellikler yemekOzellikler1 = new YemekOzellikler();
+                for (int i = 0; i < FKŞekerHastasıÇorba.GetLength(1); i++)
+                {
+
+                    yemekOzellikler1.Yemekler = FKŞekerHastasıÇorba[satirIndex1, 0];
+                    yemekOzellikler1.Protein = FKŞekerHastasıÇorba[satirIndex1, 1];
+                    yemekOzellikler1.Yağ = FKŞekerHastasıÇorba[satirIndex1, 2];
+                    yemekOzellikler1.Karbonhidrat = FKŞekerHastasıÇorba[satirIndex1, 3];
+                    yemekOzellikler1.Tuz = FKŞekerHastasıÇorba[satirIndex1, 4];
+                    yemekOzellikler1.Şeker = FKŞekerHastasıÇorba[satirIndex1, 5];
+                    yemekOzellikler1.Kalori = FKŞekerHastasıÇorba[satirIndex1, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler1);
+
+
+                Random random2 = new Random();
+                int satirIndex2 = random2.Next(FKŞekerHastasıSalata.GetLength(0));
+                YemekOzellikler yemekOzellikler2 = new YemekOzellikler();
+                for (int i = 0; i < FKŞekerHastasıSalata.GetLength(1); i++)
+                {
+
+                    yemekOzellikler2.Yemekler = FKŞekerHastasıSalata[satirIndex2, 0];
+                    yemekOzellikler2.Protein = FKŞekerHastasıSalata[satirIndex2, 1];
+                    yemekOzellikler2.Yağ = FKŞekerHastasıSalata[satirIndex2, 2];
+                    yemekOzellikler2.Karbonhidrat = FKŞekerHastasıSalata[satirIndex2, 3];
+                    yemekOzellikler2.Tuz = FKŞekerHastasıSalata[satirIndex2, 4];
+                    yemekOzellikler2.Şeker = FKŞekerHastasıSalata[satirIndex2, 5];
+                    yemekOzellikler2.Kalori = FKŞekerHastasıSalata[satirIndex2, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler2);
+                return View(yemekOzelliklers.ToList());
+                #endregion
+
+            }
+            else if (diyet.tansiyonHastasi == 1 && diyet.sekerHastasi == 1 && diyet.kalpHastasi == 1 && diyet.farkliKulturlerden == 0)
+            {
+                //  kullanilacakYemekler = "şeker_hastaları_için_türk_yemekleri.xlsx içindeki bir çorba, bir yemek, bir salata";
+                #region RastgeleSonuçlarÜretme
+
+
+                Random random = new Random();
                 int satirIndex = random.Next(ŞekerHasatasıTürkYemek.GetLength(0));
                 YemekOzellikler yemekOzellikler12 = new YemekOzellikler();
                 for (int i = 0; i < ŞekerHasatasıTürkYemek.GetLength(1); i++)
@@ -1178,15 +1238,65 @@ namespace DiyetSefii.Controllers
                 yemekOzelliklers.Add(yemekOzellikler2);
                 return View(yemekOzelliklers.ToList());
                 #endregion
-
-            }
-            else if (diyet.tansiyonHastasi == 1 && diyet.sekerHastasi == 1 && diyet.kalpHastasi == 1 && diyet.farkliKulturlerden == 0)
-            {
-                //  kullanilacakYemekler = "şeker_hastaları_için_türk_yemekleri.xlsx içindeki bir çorba, bir yemek, bir salata";
             }
             else if (diyet.tansiyonHastasi == 1 && diyet.sekerHastasi == 1 && diyet.kalpHastasi == 1 && diyet.farkliKulturlerden == 1)
             {
                 //kullanilacakYemekler = "farklı_kültür_şeker_hastaları.xlsx içindeki bir çorba, bir yemek, bir salata";
+                #region RastgeleSonuçlarÜretme
+
+
+                Random random = new Random();
+                int satirIndex = random.Next(FKŞekerHastasıYemek.GetLength(0));
+                YemekOzellikler yemekOzellikler12 = new YemekOzellikler();
+                for (int i = 0; i < ŞekerHasatasıTürkYemek.GetLength(1); i++)
+                {
+
+                    yemekOzellikler12.Yemekler = FKŞekerHastasıYemek[satirIndex, 0];
+                    yemekOzellikler12.Protein = FKŞekerHastasıYemek[satirIndex, 1];
+                    yemekOzellikler12.Yağ = FKŞekerHastasıYemek[satirIndex, 2];
+                    yemekOzellikler12.Karbonhidrat = FKŞekerHastasıYemek[satirIndex, 3];
+                    yemekOzellikler12.Tuz = FKŞekerHastasıYemek[satirIndex, 4];
+                    yemekOzellikler12.Şeker = FKŞekerHastasıYemek[satirIndex, 5];
+                    yemekOzellikler12.Kalori = FKŞekerHastasıYemek[satirIndex, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler12);
+                Random random1 = new Random();
+                int satirIndex1 = random1.Next(FKŞekerHastasıÇorba.GetLength(0));
+                YemekOzellikler yemekOzellikler1 = new YemekOzellikler();
+                for (int i = 0; i < FKŞekerHastasıÇorba.GetLength(1); i++)
+                {
+
+                    yemekOzellikler1.Yemekler = FKŞekerHastasıÇorba[satirIndex1, 0];
+                    yemekOzellikler1.Protein = FKŞekerHastasıÇorba[satirIndex1, 1];
+                    yemekOzellikler1.Yağ = FKŞekerHastasıÇorba[satirIndex1, 2];
+                    yemekOzellikler1.Karbonhidrat = FKŞekerHastasıÇorba[satirIndex1, 3];
+                    yemekOzellikler1.Tuz = FKŞekerHastasıÇorba[satirIndex1, 4];
+                    yemekOzellikler1.Şeker = FKŞekerHastasıÇorba[satirIndex1, 5];
+                    yemekOzellikler1.Kalori = FKŞekerHastasıÇorba[satirIndex1, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler1);
+
+
+                Random random2 = new Random();
+                int satirIndex2 = random2.Next(FKŞekerHastasıSalata.GetLength(0));
+                YemekOzellikler yemekOzellikler2 = new YemekOzellikler();
+                for (int i = 0; i < FKŞekerHastasıSalata.GetLength(1); i++)
+                {
+
+                    yemekOzellikler2.Yemekler = FKŞekerHastasıSalata[satirIndex2, 0];
+                    yemekOzellikler2.Protein = FKŞekerHastasıSalata[satirIndex2, 1];
+                    yemekOzellikler2.Yağ = FKŞekerHastasıSalata[satirIndex2, 2];
+                    yemekOzellikler2.Karbonhidrat = FKŞekerHastasıSalata[satirIndex2, 3];
+                    yemekOzellikler2.Tuz = FKŞekerHastasıSalata[satirIndex2, 4];
+                    yemekOzellikler2.Şeker = FKŞekerHastasıSalata[satirIndex2, 5];
+                    yemekOzellikler2.Kalori = FKŞekerHastasıSalata[satirIndex2, 6];
+
+                }
+                yemekOzelliklers.Add(yemekOzellikler2);
+                return View(yemekOzelliklers.ToList());
+                #endregion
             }
 
 

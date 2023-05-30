@@ -154,6 +154,7 @@
     <Content Include="templatemo_560_astro_motion\css\bootstrap.min.css" />
     <Content Include="templatemo_560_astro_motion\css\slick.css" />
     <Content Include="templatemo_560_astro_motion\css\templatemo-style.css" />
+    <Content Include="templatemo_560_astro_motion\img\favicon.ico" />
     <Content Include="templatemo_560_astro_motion\img\gallery-img-01.jpg" />
     <Content Include="templatemo_560_astro_motion\img\gallery-img-02.jpg" />
     <Content Include="templatemo_560_astro_motion\img\gallery-img-03.jpg" />
